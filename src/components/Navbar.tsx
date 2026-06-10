@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCartStore } from '../store/useCartStore';
-import { ShoppingCart, Store } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 export default function Navbar(): React.JSX.Element {
   const cart = useCartStore((state) => state.cart);
