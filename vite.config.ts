@@ -8,6 +8,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base:'/simple-cart-store-zustand/',
+  base:'/',
   
 })
