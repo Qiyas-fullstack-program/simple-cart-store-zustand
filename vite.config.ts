@@ -10,6 +10,6 @@ export default defineConfig({
     
 
   ],
-  base: process.env.NODE_ENV === 'production' ? '/YOUR_REPOSITORY_NAME/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/simple-cart-store-zustand/' : '/',
   
 })
