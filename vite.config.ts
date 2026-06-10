@@ -7,9 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    
-
   ],
-  base: process.env.NODE_ENV === 'production' ? '/simple-cart-store-zustand/' : '/',
+  base:'/simple-cart-store-zustand/',
   
 })
