@@ -34,6 +34,7 @@ jobs:
 
           repo_url="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           deploy_dir="$(mktemp -d)"
+          workspace_dir="$GITHUB_WORKSPACE"
 
           if git ls-remote --exit-code --heads "$repo_url" gh-pages >/dev/null 2>&1; then
             git clone --branch gh-pages --single-branch "$repo_url" "$deploy_dir"
@@ -45,7 +46,7 @@ jobs:
           fi
 
           find "$deploy_dir" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          cp -R dist/. "$deploy_dir"/
+          cp -R "$workspace_dir/dist/." "$deploy_dir"/
 
           cd "$deploy_dir"
           git config user.name "github-actions[bot]"
